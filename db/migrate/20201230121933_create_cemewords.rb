@@ -1,6 +1,6 @@
-class CreateMicroposts < ActiveRecord::Migration[6.1]
+class CreateCemewords < ActiveRecord::Migration[6.1]
   def change
-    create_table :microposts do |t|
+    create_table :cemewords do |t|
       t.string :content
       t.references :user, null: false, foreign_key: true
 
