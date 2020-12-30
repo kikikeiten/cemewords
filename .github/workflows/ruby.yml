@@ -29,5 +29,5 @@ jobs:
         ruby-version: 3.0.0-preview1
     - name: Install dependencies
       run: bundle install
-    - name: Run tests
-      run: bundle exec rake
+    #- name: Run tests
+      #run: bundle exec rake
