@@ -8,7 +8,12 @@
           <span class="text-muted">posted at <%= cemeword.created_at %></span>
         </div>
         <div>
-          <p><%= cemeword.content %></p>
+          <p class="mb-0"><%= cemeword.content %></p>
+        </div>
+        <div>
+          <% if current_user == cemeword.user %>
+            <%= link_to "Delete", cemeword, method: :delete, data: { confirm: "You sure?" }, class: 'btn btn-danger btn-sm' %>
+          <% end %>
         </div>
       </div>
     </li>
