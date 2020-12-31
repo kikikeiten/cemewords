@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'cemewords/create'
+  get 'cemewords/destroy'
   root to: 'toppages#index'
 
   get 'login', to: 'sessions#new'
