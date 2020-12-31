@@ -1,0 +1,17 @@
+<ul class="list-unstyled">
+  <% cemewords.each do |cemeword| %>
+    <li class="media mb-3">
+      <img class="mr-2 rounded" src="<%= gravatar_url(cemeword.user, { size: 50 }) %>" alt="">
+      <div class="media-body">
+        <div>
+          <%= link_to cemeword.user.name, user_path(cemeword.user) %>
+          <span class="text-muted">posted at <%= cemeword.created_at %></span>
+        </div>
+        <div>
+          <p><%= cemeword.content %></p>
+        </div>
+      </div>
+    </li>
+  <% end %>
+  <%= paginate cemewords %>
+</ul>
