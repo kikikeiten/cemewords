@@ -27,7 +27,7 @@ class CemewordsController < ApplicationController
   end
 
   def correct_user
-    @cemeword = current_user.cemewords.find_by(id: params[:id])
+    @cemeword = current_user.feed_cemewords.find_by(id: params[:id])
     unless @cemeword
       redirect_to root_url
     end
